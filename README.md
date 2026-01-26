@@ -6,7 +6,7 @@
 - **Descripción:**
   - Crear un Hello World en C.
   - Crear una Calculadora en C.
-  - Agregar e investigar Makefile.mk para Win11.
+  - Agregar e investigar `Makefile.mk` para Win11.
 
 ### Tarea 2 - Repositorio "Tarea2"
 - **Descripción:**
