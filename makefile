@@ -1,22 +1,28 @@
-# Variables
+# Variables:
+# gcc: GNU Compiler Collection
+# CFLAGS: Flags para el compilador
+# SRC: Archivos fuente en el directorio src
+# EXE: Nombres de los ejecutables generados
+
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
-EXE = main calculator
+SRC = $(wildcard src/*.c)
+EXE = $(patsubst src/%.c, %, $(SRC)) 
 
-# Objetivo Principal
+# Objetivo Principal.
 Tarea1:  $(EXE)
 
-# Reglas
-main: src/main.c
-	@echo "Compiling main.c..."
-	@$(CC) $(CFLAGS) -o main src/main.c
-	@./main
-	@echo
+# Reglas:
+# La regla % se aplica a cualquier archivo fuente en src con la extensión .c
+# $<: Representa el archivo fuente actual
+# $@: Representa el nombre del objetivo actual
+# La regla clean elimina los archivos ejecutables generados
 
-calculator: src/calculator.c
-	@echo "Compiling calculator.c..."
-	@$(CC) $(CFLAGS) -o calculator src/calculator.c
-	@./calculator
+%: src/%.c
+	@echo "Compiling $<..."
+	@$(CC) $(CFLAGS) -o $@ $<
+	@./$@
+	@echo
 
 clean:
 	rm -f $(EXE)

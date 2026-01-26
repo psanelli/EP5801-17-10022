@@ -1,10 +1,18 @@
 # EP5801 - Programación Avanzada en C
 
 ## Tarea 1
-- **Descripción:**
-  - Crear un programa "Hello World" en C:
-    - El comando `gcc main.c -o main && ./main` crea un nuevo archivo ejecutable llamado `main.exe`.
-  - Crear una calculadora en C.
-    - Se estableció un Switch/Case. Dependiendo del operador que quiera usar el usuario, se tomarán los dos números ingresados inicialmente y se realizará la operación.
-    - El comando `gcc calculator.c -o calculator && ./calculator` crea un nuevo archivo ejecutable llamado `calculator.exe`.
-  - Investigar y agregar un archivo `Makefile.mk` para Windows 11.
+
+### Descripción
+Este proyecto incluye dos programas en C:
+1. **Hello World**: Un programa básico que imprime "Hello, World!" en la consola.
+2. **Calculadora**: Un programa que realiza operaciones matemáticas básicas (suma, resta, multiplicación, división) utilizando un `switch/case` para seleccionar la operación.
+
+Ambos programas se gestionan y ejecutan mediante un archivo `Makefile`, que automatiza el proceso de compilación y ejecución.
+
+---
+
+### Estructura del Proyecto
+- **src/**: Contiene los archivos fuente del proyecto:
+  - `main.c`: Código fuente del programa "Hello World".
+  - `calculator.c`: Código fuente del programa de la calculadora.
+- **makefile**: Archivo que define las reglas para compilar y ejecutar los programas.
