@@ -44,6 +44,8 @@ int main() {
     char op;        // Operador
     float n, m;     // Números
 
+    printf("\n--- Calculadora Simple en C ---\n");  // Título
+
     printf("Ingrese el primer numero: ");   // No me agarra los acentos :C
     scanf("%f", &n);
 
