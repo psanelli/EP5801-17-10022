@@ -1,15 +1,16 @@
 # EP5801 - Programación Avanzada en C
 
-## Tareas
+## Tarea 2
 
-### Tarea 1 - Repositorio "Tarea1"
-- **Descripción:**
-  - Crear un Hello World en C.
-  - Crear una Calculadora en C.
-  - Agregar e investigar `Makefile.mk` para Win11.
+### Descripción
+Este proyecto incluye dos programas:
+1. 
+
+Ademas, se instalo una distribución de Linux, Ubuntu, con WSL (Windows Subsystem for Linux) para ejecutar los archivos `.asm`. para acceder a esta distribucion escribimos wsl en el terminal y se busca la carpeta donde esta el repositorio.
 
 ---
 
-### Tarea 2 - Repositorio "Tarea2"
-- **Descripción:**
-  - Crear un codigo en Assembly que imprima una string que envíe un usuario.
+### Estructura del Proyecto
+- **src/**: Contiene los archivos fuente del proyecto:
+  - `print.asm`:
+- **makefile**: Archivo que define las reglas para compilar y ejecutar los programas.
