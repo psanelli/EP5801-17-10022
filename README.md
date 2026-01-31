@@ -4,8 +4,8 @@
 
 ### Descripción
 Este proyecto incluye dos programas:
-1. Print: Pregunta al usuario su nombre y le responde con un saludo.
-2. Main: Funcion que ejecuta el programa Print.
+1. **Print**: Pregunta al usuario su nombre y le responde con un saludo.
+2. **Main**: Funcion que ejecuta el programa Print.
 
 Se utilizó una distribución de Linux, Ubuntu, con WSL (Windows Subsystem for Linux) para compilar y ejecutar los archivos `.asm`. Para acceder a esta distribución, se debe escribir `wsl` en el terminal y navegar a la carpeta donde está el repositorio.
 
