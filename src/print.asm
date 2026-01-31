@@ -4,25 +4,48 @@
 ; 30 de Enero de 2026
 ; filepath: src/print.asm
 
+
+
 section .data
-    msg db "Hello, World!", 0Ah  ; Mensaje a imprimir con salto de línea
-    len equ $ - msg              ; Longitud del mensaje
+    preg db "Coloca tu nombre aqui: ", 0Ah  ; Mensaje con pregunta del programa
+    preg_len equ $ - preg                   ; Longitud del mensaje
+    msg db "Hola, ", 0                      ; Mensaje de saludo
+    msg_len equ $ - msg                     ; Longitud del mensaje
+
+section .bss
+    name resb 32                            ; Espacio para el nombre
 
 section .text
-    global print_hello           ; Hacer la etiqueta accesible desde C
+    global print_preg                       ; Hacer la etiqueta accesible desde C
 
-print_hello:
-    ; Llamada al sistema write (sys_write)
-    mov eax, 4       ; Número de syscall para sys_write
-    mov ebx, 1       ; File descriptor (stdout)
-    mov ecx, msg     ; Dirección del mensaje
-    mov edx, len     ; Longitud del mensaje
-    int 0x80         ; Interrupción para llamar al kernel
+print_preg:
+    ; --- Imprimir la pregunta ---
+    mov rax, 1              ; sys_write. ID para escritura
+    mov rdi, 1              ; stdout. Pantalla
+    mov rsi, preg           ; Dirección del mensaje
+    mov rdx, preg_len       ; Longitud del mensaje
+    syscall                 ; Llamar al SO para imprimir
+    
+    ; --- Leer la respuesta del usuario ---
+    mov rax, 0              ; sys_read (ID para lectura)
+    mov rdi, 0              ; stdin (Teclado)
+    mov rsi, name           ; Dónde guardar lo que escriba
+    mov rdx, 32             ; Máximo de bytes a leer
+    syscall                 ; El SO espera a que el usuario presione Enter
 
-    ; Salir del programa
-    ;mov eax, 1       ; Número de syscall para ExitProcess
-    ;xor ebx, ebx     ; Código de salida (0)
-    ;int 0x80
+    ; --- Imprimir el saludo con el nombre ---
+    mov rax, 1              ; sys_write
+    mov rdi, 1              ; stdout
+    mov rsi, msg            ; Dirección del mensaje de saludo
+    mov rdx, msg_len        ; Longitud del mensaje de saludo
+    syscall                 ; Llamar al SO para imprimir
 
-    ; Retornar al código C
+    ; --- Imprimir el nombre ingresado ---
+    mov rax, 1              ; sys_write
+    mov rdi, 1              ; stdout
+    mov rsi, name           ; Dirección del nombre ingresado
+    mov rdx, 32             ; Longitud máxima del nombre
+    syscall                 ; Llamar al SO para imprimir
+
+    ; --- Retornar al código C ---
     ret
