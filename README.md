@@ -17,3 +17,11 @@ Terminada [x] 26/01/2026
   - Crear un codigo en Assembly que imprima una string que envíe un usuario.
 
 Terminada [x] 30/01/2026
+
+---
+
+### Tarea 3 - Repositorio "Tarea3"
+- **Descripción:**
+  - Implementar el sistema de lectura serial de sensores mediante struct, unions y bitfields
+
+Terminada []
