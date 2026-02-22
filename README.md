@@ -19,6 +19,7 @@ El proyecto está estructurado de la siguiente manera:
 
 ### Diagrama de la Estructura
 El proyecto sigue la estructura del siguiente diagrama:
+
 ![alt text](image.png)
 
 ---
