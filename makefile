@@ -24,18 +24,18 @@ Tarea3:  $(BIN)/$(EXE)
 # $@: Representa el nombre del objetivo actual
 # La regla clean elimina los archivos ejecutables generados
 
-$(BIN)/$(OUTPUT): $(OBJ_FILES)
-    @mkdir -p $(BIN)
-    @gcc $^ -o $@
-    @echo "Compilación completada. Ejecutable generado en $(BIN)/$(OUTPUT)"
+$(BIN)/$(EXE): $(FILES_OBJ)
+	@mkdir -p $(BIN)
+	@gcc $^ -o $@
+	@echo "Compilación completada. Ejecutable generado en $(BIN)/$(EXE)"
 
 $(BUILD)/%.o: $(SRC)/%.c
-    @mkdir -p $(BUILD)
-    @gcc -c $< -o $@
+	@mkdir -p $(BUILD)
+	@gcc -c $< -o $@
 
 $(BUILD)/%.o: $(SENSORS)/%.c
-    @mkdir -p $(BUILD)
-    @gcc -c $< -o $@
+	@mkdir -p $(BUILD)
+	@gcc -c $< -o $@
 
 clean:
 	@rm -fr ${BUILD}
