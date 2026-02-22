@@ -24,7 +24,7 @@ Terminada [x] 30/01/2026
 - **Descripción:**
   - Implementar el sistema de lectura serial de sensores mediante struct, unions y bitfields
 
-Terminada []
+Terminada [x] 22/02/2026
 
 ---
 
