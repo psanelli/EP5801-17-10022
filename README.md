@@ -5,13 +5,6 @@
 ### Descripción
 Este proyecto consiste en la implementación de **bitfields** y **estructuras** en C, simulando la entrada simple de un microcontrolador y siguiendo la estructura del diagrama proporcionado. El objetivo es procesar datos provenientes de dos sensores (posición y gestos) y ejecutar las funciones correspondientes según los datos recibidos.
 
-Se utilizó una distribución de Linux, Ubuntu, con WSL (Windows Subsystem for Linux) para compilar y ejecutar los archivos. Para acceder a esta distribución, se debe escribir `wsl` en el terminal y navegar a la carpeta donde está el repositorio.
-
-El entorno de trabajo utilizado para este proyecto es el siguiente:
-- Sistema Operativo: Linux (Ubuntu 64 bits)
-- Compilador: GCC
-- Formato de salida: ELF64
-
 ---
 
 ### Estructura del Proyecto
@@ -26,8 +19,7 @@ El proyecto está estructurado de la siguiente manera:
 
 ### Diagrama de la Estructura
 El proyecto sigue la estructura del siguiente diagrama:
-
-![Diagrama de Estructura](ruta/a/diagrama.png)
+![alt text](image.png)
 
 ---
 
