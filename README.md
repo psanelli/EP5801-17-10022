@@ -35,7 +35,7 @@ Terminada [x] 22/02/2026
   1. Reemplazar la memoria dinámica por memoria estática en los alojadores.
   2. Utilizar el alojador de stack para construir una calculadora de stack usando Reverse Polish Notation (RPN).
 
-Terminada []
+Terminada [x] 07/04/2026
 
 ---
 
