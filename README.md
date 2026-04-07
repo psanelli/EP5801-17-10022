@@ -21,7 +21,6 @@ El proyecto está estructurado de la siguiente manera:
 - `build.mk`: Reglas de compilación normal.
 - `debug.mk`: Reglas de compilación con flags de depuración.
 - `build/`: Binarios/objetos generados por la compilación.
-- `image.png`: Diagrama de referencia de la estructura.
 ---
 
 ### Diagrama de la Estructura
