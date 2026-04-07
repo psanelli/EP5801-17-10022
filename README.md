@@ -41,10 +41,10 @@ Terminada []
 
 ### Tarea 5 - Repositorio "Tarea5"
 - **Descripción:**
-  1. Crear una estructura que represente una partícula en el espacio x, y, z y su velocidad v.
-  2. Utilizar vectores para almacenar n partículas.
+  1. Crear una estructura que represente una partícula en el espacio x, y, z y su velocidad $\vec{v}$.
+  2. Utilizar vectores para almacenar $n$ partículas.
   3. Crear una función para calcular la distancia de cada eje entre ambas partículas.
-  4. Usando esta función, aplicarla para vectores, es decir, distancia(V1, V2) = Vr, donde Vr(0) = distancia(V1(0), V2(0)).
+  4. Usando esta función, aplicarla para vectores, es decir, distancia$(V_1, V_2) = V_r$ donde $V_r(0) = distancia(V_1(0), V_2(0))$.
   5. Intentar usar AVX para las operaciones.
 
 Terminada []
