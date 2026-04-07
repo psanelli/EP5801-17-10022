@@ -11,9 +11,17 @@
 ### Estructura del Proyecto
 El proyecto está estructurado de la siguiente manera:
 - **src/**: Contiene los archivos fuente del proyecto:
-  - `main.c`: Archivo principal en C.
-- **makefile**: Archivo que define las reglas para compilar y ejecutar los programas.
+  - `main.c`: Punto de entrada del programa.
+  - **arena/**:
+    - `arena_linear.h` / `arena_linear.c`: Implementación del alojador lineal con memoria estática.
+    - `arena_stack.h` / `arena_stack.c`: Implementación del alojador tipo stack con memoria estática.
+  - **calculator/**:
+    - `rpn.h` / `rpn.c`: Calculadora RPN y manejo de estados de error.
 
+- `build.mk`: Reglas de compilación normal.
+- `debug.mk`: Reglas de compilación con flags de depuración.
+- `build/`: Binarios/objetos generados por la compilación.
+- `image.png`: Diagrama de referencia de la estructura.
 ---
 
 ### Diagrama de la Estructura
